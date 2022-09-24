@@ -1,0 +1,15 @@
+body {
+  background-color: #302834;
+  color: white;
+  font-family: Cambria;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+body * {
+  box-sizing: border-box;
+
+}
+
+.App {
+}
