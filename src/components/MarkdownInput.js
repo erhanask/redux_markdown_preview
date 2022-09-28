@@ -6,7 +6,7 @@ export const MarkdownInput = () => {
     const markdown = useSelector(state => state.markdown.text);
 
     return (
-        <div style={{flex: '1', padding: '20px'}}>
+        <div className={`input-box`} style={{flex: '1', padding: '20px'}}>
             <textarea value={markdown} style={{
                 width: '100%',
                 display: '-webkit-fill-available',

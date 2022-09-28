@@ -6,10 +6,10 @@ import {HelpButton} from "./components/HelpButton";
 function App() {
   return (
     <div className="App">
-        <div style={{display:'flex', justifyContent: 'end', padding: '20px'}}>
+        <div className={`help-button-wrapper`} style={{display:'flex', justifyContent: 'end', padding: '20px'}}>
             <HelpButton></HelpButton>
         </div>
-        <div style={{display:'flex'}}>
+        <div className={`input-result-boxes`} style={{display:'flex'}}>
           <MarkdownInput></MarkdownInput>
           <MarkdownResult></MarkdownResult>
         </div>
