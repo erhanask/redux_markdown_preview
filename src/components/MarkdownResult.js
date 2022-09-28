@@ -1,13 +1,15 @@
+import {useSelector} from "react-redux";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from 'https://esm.sh/remark-gfm@3'
 
 
 export const MarkdownResult = () =>{
+    const markdown = useSelector(state => state.markdown.text);
     return (
         <div  style={{flex: '1', padding: '20px'}}>
-            <div style={{padding:'20px',border:"1px solid white", backgroundColor: '#949191', color: 'black', wordBreak:'break-word'}}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam consequuntur doloremque eaque itaque minus, officia omnis, quam quas, quidem quis tempora? Aliquid amet dolore doloremque, ea et impedit nesciunt!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam consequuntur doloremque eaque itaque minus, officia omnis, quam quas, quidem quis tempora? Aliquid amet dolore doloremque, ea et impedit nesciunt!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam consequuntur doloremque eaque itaque minus, officia omnis, quam quas, quidem quis tempora? Aliquid amet dolore doloremque, ea et impedit nesciunt!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam consequuntur doloremque eaque itaque minus, officia omnis, quam quas, quidem quis tempora? Aliquid amet dolore doloremque, ea et impedit nesciunt!
+            <div style={{padding:'20px',border:"1px solid white", backgroundColor: '#949191', color: 'black', wordBreak:'break-word',height:'750px'}}>
+                <ReactMarkdown children={markdown} remarkPlugins={[remarkGfm]}>
+                </ReactMarkdown>
             </div>
         </div>
     )
